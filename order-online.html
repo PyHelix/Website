@@ -41,6 +41,26 @@ h2{margin:2.5rem 0 1rem;font-weight:700;color:var(--dark)}
 </ul>
 
 <div class="tab-content">
+<script>
+  const DESCRIPTIONS = {
+    "Roast Beef"      : "Slow-roasted AAA Alberta beef, sliced thin.",
+    "Roast Turkey"    : "In-house roasted turkey, choose white or dark meat.",
+    "Ham"             : "Black-forest or honey ham — your choice.",
+    "Chicken Salad"   : "Creamy salad made from our roasted chicken.",
+    "Salmon Salad"    : "Wild salmon with dill & lemon.",
+    "Egg Salad"       : "Classic farm-fresh egg salad.",
+    "Veggie"          : "Packed with seasonal vegetables. Add cheese for $1.",
+    "Grilled Cheese"  : "Your pick of cheddar, mozza, Swiss or Havarti.",
+    "Kerri’s Special Ham & Cheese": "Grilled ham & cheese loaded with veggies and sauce.",
+
+    "Iced Coffee"     : "Fresh-brewed coffee flash-chilled over ice.",
+    "Iced Tea Latte"  : "Organic tea, milk of your choice, shaken over ice.",
+    "Iced Matcha Latte": "Stone-ground matcha with milk on ice.",
+    "Assorted Muffins (1pc)" : "Baker’s choice — ask for today’s flavour.",
+    "Sourdough"       : "Naturally leavened loaf with a chewy crust.",
+    /* …add more items as you like… */
+  };
+</script>
 
 <!-- ═════════════════ LUNCH ═════════════════ -->
 <div class="tab-pane fade show active" id="lunch">
@@ -279,7 +299,10 @@ hot.forEach(([name, img, variants]) => {
         <div class="price">$${variants[0][1].toFixed(2)}</div>
       </div>
     </div>`;
-}); 
+  const cardProd = col.firstElementChild;
+  cardProd.dataset.desc = DESCRIPTIONS[name] || '';
+  hotRow.appendChild(col);
+});
  </script>
   <div class="col-6 col-md-4 col-lg-3"><div class="card-prod open-modal" data-name="Kerri’s Coffee" data-price="3.25"><div class="img no-img">Image coming soon</div><div class="p-2"><h6>Kerri’s Coffee</h6><div class="price">$3.25</div></div></div></div>
  </div>
@@ -398,26 +421,6 @@ cold.forEach(([name,img,vars])=>{
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 (()=>{
-
-  /* ───────── 1. MASTER DESCRIPTION LIST ───────── */
-  const DESCRIPTIONS = {
-    "Roast Beef"      : "Slow-roasted AAA Alberta beef, sliced thin.",
-    "Roast Turkey"    : "In-house roasted turkey, choose white or dark meat.",
-    "Ham"             : "Black-forest or honey ham — your choice.",
-    "Chicken Salad"   : "Creamy salad made from our roasted chicken.",
-    "Salmon Salad"    : "Wild salmon with dill & lemon.",
-    "Egg Salad"       : "Classic farm-fresh egg salad.",
-    "Veggie"          : "Packed with seasonal vegetables. Add cheese for $1.",
-    "Grilled Cheese"  : "Your pick of cheddar, mozza, Swiss or Havarti.",
-    "Kerri’s Special Ham & Cheese": "Grilled ham & cheese loaded with veggies and sauce.",
-
-    "Iced Coffee"     : "Fresh-brewed coffee flash-chilled over ice.",
-    "Iced Tea Latte"  : "Organic tea, milk of your choice, shaken over ice.",
-    "Iced Matcha Latte": "Stone-ground matcha with milk on ice.",
-    "Assorted Muffins (1pc)" : "Baker’s choice — ask for today’s flavour.",
-    "Sourdough"       : "Naturally leavened loaf with a chewy crust.",
-    /* …add more items as you like… */
-  };
 
   /* ───────── 2. DOM REFERENCES ───────── */
   const modal         = new bootstrap.Modal('#itemModal');
