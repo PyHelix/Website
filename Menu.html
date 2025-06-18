@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Menu | Kerri’s Café &amp; Bakery</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* —— COLOURS —— */
+:root{
+  --green:#6faa3b;        /* accent */
+  --green-dark:#3f5d24;   /* headings, nav */
+  --green-light:#c9ecaf;  /* rules   */
+  --light:#fafafa;        /* page bg */
+}
+
+/* —— BASE —— */
+body{font-family:system-ui;background:var(--light);color:#666;}
+a{color:var(--green-dark);text-decoration:none;}
+h5{margin-top:2rem;font-weight:700;color:#222;}
+.note{font-size:.85rem;color:#888;margin-bottom:.9rem;}
+
+/* —— NAVBAR —— */
+.navbar{background:var(--green);}
+.nav-link{color:#fff!important;font-weight:600;}
+
+/* —— INTRO —— */
+.lead-note{background:#e9efe6;border-radius:.5rem;padding:1.25rem;font-size:.9rem;}
+.cat-links a{font-weight:600;margin:.15rem .25rem;white-space:nowrap;}
+
+/* —— SECTION HEADINGS —— */
+.menu-section{margin-top:4rem;}
+.menu-section h2{
+  color:var(--green-dark);font-weight:700;font-size:1.35rem;
+  border-bottom:4px solid var(--green-light);padding-bottom:.25rem;margin-bottom:1.5rem;
+}
+
+/* —— MENU TABLE —— */
+.menu-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.95rem;
+  margin-bottom:2rem;
+  table-layout:fixed;            /* fix column widths */
+}
+.menu-table col.price-col{width:5.5rem;}   /* reserve 5.5 rem for price */
+.menu-table td{padding:.3rem .4rem;vertical-align:top;}
+.menu-table tr{border-bottom:1px dotted #bfc8b7;}
+.menu-table tr:last-child{border-bottom:none;}
+.item{color:#444;word-wrap:break-word;}
+.price{text-align:right;color:#000;}
+
+/* —— FOOTER —— */
+.footer{
+  background:var(--green-dark);
+  color:#d8efd0;
+  padding:2rem 0;
+  text-align:center;
+  font-size:.9rem;
+  margin-top:4rem;
+}
+</style>
+</head>
+<body>
+
+<!-- ========= NAV ========= -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="https://static.wixstatic.com/media/4f8951_677403b6894746c58c83e6f03a97c49a~mv2.png/v1/fill/w_184,h_152,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO.png" alt="logo" height="48">
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#showcase">Specials</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#bakery">Bakery</a></li>
+        <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#catering">Catering</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========= INTRO ========= -->
+<div class="container my-4">
+  <div class="lead-note text-center">
+    This menu reflects the wide assortment of food options we can create.
+    However, not all items are available each day.  
+    Please check the daily specials to see what has been freshly made for you today.
+  </div>
+
+  <p class="cat-links text-center">
+    <a href="#lunch">Lunch</a> |
+    <a href="#bakery">Bakery</a> |
+    <a href="#soup">Soup</a> |
+    <a href="#salad">Salad</a> |
+    <a href="#breakfast">Breakfast</a> |
+    <a href="#hot">Hot Beverages</a> |
+    <a href="#cold">Cold Beverages</a> |
+    <a href="#icecream">Hard Ice Cream &amp; More</a> |
+    <a href="#pastry">Pastry</a> |
+    <a href="#baking">Baking</a> |
+    <a href="#platters">Platters</a> |
+    <a href="#retail">Gourmet Retail</a>
+  </p>
+</div>
+
+<!-- ========= LUNCH ========= -->
+<div class="container menu-section" id="lunch">
+  <h2>Lunch</h2>
+  <p class="note">
+    Your choice of Kerri Bun (white or multigrain), white, multigrain or rye bread, or gluten-free bread.  
+    Fresh veggies, cheese &amp; condiments included.
+  </p>
+
+  <h5>Sandwiches</h5>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Roast Beef</td><td class="price">$14</td></tr>
+    <tr><td class="item">Roast Turkey</td><td class="price">$14</td></tr>
+    <tr><td class="item">Ham</td><td class="price">$14</td></tr>
+    <tr><td class="item">Chicken Salad</td><td class="price">$14</td></tr>
+    <tr><td class="item">Salmon Salad</td><td class="price">$14.25</td></tr>
+    <tr><td class="item">Egg Salad</td><td class="price">$12</td></tr>
+    <tr><td class="item">Veggie</td><td class="price">$10.25</td></tr>
+    <tr><td class="item">Grilled Cheese</td><td class="price">$8</td></tr>
+    <tr><td class="item">Grilled Ham &amp; Cheese</td><td class="price">$14</td></tr>
+    <tr><td class="item">Kerri’s Special Grilled</td><td class="price">$14.50</td></tr>
+  </table>
+
+  <h5>Spreads &amp; Other</h5>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Bruschetta &amp; Baguette</td><td class="price">$8.25</td></tr>
+    <tr><td class="item">Hummus Platter</td><td class="price">$14</td></tr>
+    <tr><td class="item">Wednesday Lunch Special</td><td class="price">$16</td></tr>
+  </table>
+</div>
+
+<!-- ========= BAKERY ========= -->
+<div class="container menu-section" id="bakery">
+  <h2>Bakery – Artisan Bread</h2>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Sourdough</td><td class="price">$8</td></tr>
+    <tr><td class="item">Flavoured Sourdough</td><td class="price">$9</td></tr>
+    <tr><td class="item">Italian Pagnotta</td><td class="price">$7</td></tr>
+    <tr><td class="item">White Bread</td><td class="price">$5</td></tr>
+    <tr><td class="item">Multigrain Bread</td><td class="price">$6</td></tr>
+    <tr><td class="item">Garlic Cheese Loaf</td><td class="price">$7</td></tr>
+  </table>
+</div>
+
+<!-- ========= SOUP ========= -->
+<div class="container menu-section" id="soup">
+  <h2>Soup</h2>
+  <p class="note">1-2 hearty soups offered daily – check specials for today’s flavours.</p>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Daily Soup – Small</td><td class="price">$6</td></tr>
+    <tr><td class="item">Daily Soup – Large</td><td class="price">$8.75</td></tr>
+  </table>
+</div>
+
+<!-- ========= SALAD ========= -->
+<div class="container menu-section" id="salad">
+  <h2>Salad</h2>
+  <p class="note">Fresh salads with in-house dressings – see daily specials.</p>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Daily Salad – Small</td><td class="price">$8.75</td></tr>
+    <tr><td class="item">Daily Salad – Large</td><td class="price">$11</td></tr>
+  </table>
+</div>
+
+<!-- ========= BREAKFAST ========= -->
+<div class="container menu-section" id="breakfast">
+  <h2>Breakfast</h2>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Kerri Breakfast Bagel</td><td class="price">$12.25</td></tr>
+    <tr><td class="item">French Toast</td><td class="price">$12.50</td></tr>
+  </table>
+</div>
+
+<!-- ========= HOT BEVERAGES ========= -->
+<div class="container menu-section" id="hot">
+  <h2>Hot Beverages – Coffee &amp; Espresso</h2>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Brewed Coffee – 8 oz</td><td class="price">$3.25</td></tr>
+    <tr><td class="item">Espresso – single</td><td class="price">$3.50</td></tr>
+    <tr><td class="item">Cappuccino – 8 oz</td><td class="price">$5</td></tr>
+    <tr><td class="item">Café Latte – 8 oz</td><td class="price">$5</td></tr>
+  </table>
+</div>
+
+<!-- ========= COLD BEVERAGES ========= -->
+<div class="container menu-section" id="cold">
+  <h2>Cold Beverages</h2>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Iced Coffee – Small</td><td class="price">$5.25</td></tr>
+    <tr><td class="item">Real Fruit Smoothie – Small</td><td class="price">$5.50</td></tr>
+    <tr><td class="item">Milk Shake – Small</td><td class="price">$5.50</td></tr>
+  </table>
+</div>
+
+<!-- ========= ICE CREAM ========= -->
+<div class="container menu-section" id="icecream">
+  <h2>Hard Ice Cream / Frozen Yogurt / Sorbet</h2>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">1 scoop</td><td class="price">$3.25</td></tr>
+    <tr><td class="item">2 scoops</td><td class="price">$4.25</td></tr>
+    <tr><td class="item">Baby</td><td class="price">$1</td></tr>
+  </table>
+</div>
+
+<!-- ========= PASTRY ========= -->
+<div class="container menu-section" id="pastry">
+  <h2>Pastry – Savoury</h2>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Whole Quiche</td><td class="price">$24</td></tr>
+    <tr><td class="item">Slice of Quiche</td><td class="price">$6.25</td></tr>
+    <tr><td class="item">Tortière</td><td class="price">$30</td></tr>
+  </table>
+</div>
+
+<!-- ========= BAKING ========= -->
+<div class="container menu-section" id="baking">
+  <h2>Baking – Sweet Treats</h2>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Assorted Muffin</td><td class="price">$3.25</td></tr>
+    <tr><td class="item">Cinnamon Bun</td><td class="price">$3.50</td></tr>
+    <tr><td class="item">Cookie</td><td class="price">$2.25</td></tr>
+  </table>
+</div>
+
+<!-- ========= PLATTERS ========= -->
+<div class="container menu-section" id="platters">
+  <h2>Platters</h2>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Meat &amp; Cheese – per person</td><td class="price">$17</td></tr>
+    <tr><td class="item">Veggie Platter – per person</td><td class="price">$10</td></tr>
+  </table>
+</div>
+
+<!-- ========= RETAIL ========= -->
+<div class="container menu-section" id="retail">
+  <h2>Gourmet Retail</h2>
+  <table class="menu-table">
+    <colgroup><col><col class="price-col"></colgroup>
+    <tr><td class="item">Blue Door Olive Oil / Vinegar</td><td class="price">$14</td></tr>
+    <tr><td class="item">Salt Spring Sea Salt</td><td class="price">$12</td></tr>
+    <tr><td class="item">P&amp;J Apiaries Honey</td><td class="price">Market</td></tr>
+  </table>
+</div>
+
+<!-- ========= FOOTER ========= -->
+<footer class="footer">
+  © 2019 Kerri's Café &amp; Bakery | 10508 100 Ave, Westlock, AB
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
