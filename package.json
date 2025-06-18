@@ -1,9 +1,10 @@
 {
-  "devDependencies": {
-    "postcss": "^8.5.6",
-    "postcss-html": "^1.8.0",
-    "stylelint-config-recommended": "^16.0.0",
-    "stylelint-config-standard": "^38.0.0"
+  "name": "silver-cendol",
+  "private": true,
+  "scripts": {
+    "build": "vite build"
   },
-  "type": "module"
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
 }
