@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bakery • Kerri’s Café & Bakery</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- —— SHARED STYLES (same :root colours etc.) —— -->
+  <style>
+  :root{
+    --green:#6faa3b;
+    --green-dark:#3f5d24;
+    --green-light:#c9ecaf;
+    --light:#fafafa;
+  }
+  body      {font-family:system-ui;background:var(--light);color:#000;}
+  a         {color:var(--green-dark);text-decoration:none;}
+  .navbar   {background:var(--green);}
+  .navbar-brand img{height:80px;}
+  .nav-link {color:#fff!important;font-weight:600;}
+
+  /* page padding helper */
+  .section-pad{padding:4rem 0;}
+
+  /* bakery page hero */
+  .bakery-hero{
+    background:#f8f4e9;
+  }
+  </style>
+</head>
+
+<body>
+
+<!-- ========= NAVBAR ========= -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="https://static.wixstatic.com/media/4f8951_677403b6894746c58c83e6f03a97c49a~mv2.png/v1/fill/w_184,h_152,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO.png" alt="logo">
+    </a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#showcase">Specials</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="bakery.html">Bakery</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#catering">Catering</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="order-online.html">Order Online</a></li>
+        <li class="nav-item">
+          <a class="btn btn-light ms-lg-3" href="mailto:orders@kerriscafeandbakery.com?subject=Pre-Order">Pre-Order Now</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========= BAKERY CONTENT ========= -->
+<section class="bakery-hero section-pad">
+  <div class="container-fluid">
+    <div class="row g-0 align-items-stretch">
+
+      <!-- left image strip (desktop only) -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <div style="background:url('https://static.wixstatic.com/media/5cd9ee_e8da56cad5054d409a8e9b883e14d920~mv2.jpg/v1/fill/w_550,h_2972,al_c,q_85,enc_avif,quality_auto/5cd9ee_e8da56cad5054d409a8e9b883e14d920~mv2.jpg') center/cover no-repeat;height:100%"></div>
+      </div>
+
+      <!-- main text column -->
+      <div class="col-lg-6 py-5 px-4 px-lg-5 text-center text-lg-start">
+        <h1 class="fw-bold mb-1" style="color:#a18858;">Welcome to our<br>Bakery</h1>
+        <p class="text-uppercase small mb-4" style="color:#a18858;letter-spacing:.08em;">
+          Handmade Artisan Breads • Baked Fresh Every Morning
+        </p>
+
+        <p class="mb-4">
+          A new addition to our café as of January 2021, we encourage you to follow the enticing
+          aromas of freshly-baked bread and wander downstairs to our bakery.
+        </p>
+
+        <p class="fw-bold mb-2">Currently Offering:</p>
+        <ul class="list-unstyled ps-3 mb-4">
+          <li>• Sourdough</li><li>• Flavoured Sourdough</li><li>• Italian Pagnotta</li>
+          <li>• <strong>Malt Bread (Wednesdays)</strong></li><li>• <strong>Rye Bread (Tuesdays)</strong></li>
+          <li>• White & Multigrain Bread</li><li>• Raisin Bread</li><li>• Garlic Cheese Bread</li>
+          <li>• Kerri Buns – white & multigrain</li><li>• Montreal-Style Bagels</li>
+        </ul>
+
+        <p class="mb-4">
+          Each recipe is meticulously tested and baked fresh every morning in our stone-deck oven.
+          All loaves are preservative-free, so you can nourish your body with the very best.
+        </p>
+
+        <img src="https://png.pngtree.com/png-clipart/20240703/original/pngtree-wheat-icon-isolated-on-white-background-vector-png-image_15480114.png"
+             alt="wheat icon" style="height:60px">
+
+        <div class="mt-3">
+          <a href="mailto:orders@kerriscafeandbakery.com?subject=Bakery%20Bread%20Order"
+             class="btn btn-accent fw-bold">
+            Order your bread &gt;
+          </a>
+        </div>
+      </div>
+
+      <!-- right image strip (desktop only) -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <div style="background:url('https://static.wixstatic.com/media/5cd9ee_e8da56cad5054d409a8e9b883e14d920~mv2.jpg/v1/fill/w_548,h_2972,al_c,q_85,enc_avif,quality_auto/5cd9ee_e8da56cad5054d409a8e9b883e14d920~mv2.jpg') center/cover no-repeat;height:100%"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========= FOOTER ========= -->
+<footer class="py-4" style="background:var(--green-dark);color:#d8efd0;">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+    <p class="mb-0">All Rights Reserved. Kerri's Café & Bakery © 2019.</p>
+    <div>
+      <a href="https://m.facebook.com/@kerriscafeandbakery/">
+        <img src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_70,h_70,al_c,q_85/e316f544f9094143b9eac01f1f19e697.png"
+             alt="Facebook" style="height:32px">
+      </a>
+      <a href="https://www.instagram.com/kerriscafeandbakery/">
+        <img src="https://static.wixstatic.com/media/8d6893330740455c96d218258a458aa4.png/v1/fill/w_70,h_70,al_c,q_85/8d6893330740455c96d218258a458aa4.png"
+             alt="Instagram" style="height:32px">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ========= BOOTSTRAP JS ========= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
