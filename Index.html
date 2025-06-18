@@ -52,6 +52,7 @@ a{color:var(--green-dark);text-decoration:none;}
 
 /* misc */
 .object-fit-cover{object-fit:cover;}
+#cafeCarousel .carousel-item img{height:500px;object-fit:cover;}
 </style>
 </head>
 <body>
@@ -67,6 +68,9 @@ a{color:var(--green-dark);text-decoration:none;}
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#showcase">Specials</a></li>
         <li class="nav-item"><a class="nav-link" href="Bakery.html">Bakery</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="Menu.html">Menu</a></li>
+
  
         <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
         <li class="nav-item"><a class="nav-link" href="#catering">Catering</a></li>
@@ -217,7 +221,7 @@ a{color:var(--green-dark);text-decoration:none;}
       <!-- —— OUR CAFÉ PHOTOS —— -->
       <div class="tab-pane fade" id="cafe-pane" role="tabpanel">
         <div id="cafeCarousel" class="carousel slide"
-             data-bs-ride="carousel" data-bs-interval="3000"
+             data-bs-ride="carousel" data-bs-interval="5000"
              data-bs-pause="hover" data-bs-wrap="true">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -389,7 +393,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('food-tab').addEventListener('hide.bs.tab',()=>foodCarousel.pause());
   document.getElementById('food-tab').addEventListener('shown.bs.tab',()=>foodCarousel.cycle());
   document.getElementById('cafe-tab').addEventListener('shown.bs.tab',()=>{
-    cafeCarousel ??= new bootstrap.Carousel('#cafeCarousel',{interval:3000,pause:'hover',wrap:true});
+    cafeCarousel ??= new bootstrap.Carousel('#cafeCarousel',{interval:5000,pause:'hover',wrap:true});
     cafeCarousel.cycle();
   });
   document.getElementById('cafe-tab').addEventListener('hide.bs.tab',()=>{if(cafeCarousel){cafeCarousel.pause();}});
