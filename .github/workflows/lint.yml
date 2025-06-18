@@ -1,0 +1,31 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Cache Super-Linter
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache
+          key: ${{ runner.os }}-super-linter-${{ hashFiles('**/*.js', '**/*.html', '**/*.css') }}
+          restore-keys: |
+            ${{ runner.os }}-super-linter-
+
+      - name: Run Super-Linter
+        uses: github/super-linter@latest
+        env:
+          DEFAULT_BRANCH: main
+          VALIDATE_JAVASCRIPT_ES: true
+          VALIDATE_HTML: true
+          VALIDATE_CSS: true
+          DISABLE_ERRORS: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
